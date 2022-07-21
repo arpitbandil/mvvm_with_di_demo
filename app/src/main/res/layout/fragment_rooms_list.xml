@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="hasData"
+            type="boolean" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:isGone="@{!hasData}">
+
+            <LinearLayout
+                android:id="@+id/legend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/light_green"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/margin_normal"
+                    android:paddingVertical="@dimen/padding_vertical_normal"
+                    android:text="@string/available"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:alpha="0.5"
+                    android:background="@color/virgin_red"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/margin_normal"
+                    android:paddingVertical="@dimen/padding_vertical_normal"
+                    android:text="@string/occupied"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rooms_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/card_side_margin"
+                android:layout_marginEnd="@dimen/card_side_margin"
+                android:clipToPadding="false"
+                android:paddingTop="@dimen/margin_normal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="4"
+                tools:listitem="@layout/list_item_room" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/empty_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/no_rooms_found"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            app:isGone="@{hasData}" />
+    </FrameLayout>
+
+</layout>

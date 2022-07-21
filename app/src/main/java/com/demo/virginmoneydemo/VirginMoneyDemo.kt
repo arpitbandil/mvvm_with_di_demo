@@ -1,6 +1,7 @@
 package com.demo.virginmoneydemo
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-class VirginMoneyDemo : Application() {
-}
+@HiltAndroidApp
+class VirginMoneyDemo : Application()

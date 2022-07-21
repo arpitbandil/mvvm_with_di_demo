@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">VirginMoneyDemo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="peoples">Peoples</string>
+    <string name="room_list_title">Rooms</string>
+    <string name="no_people_found">No person found</string>
+    <string name="people_avatar">people_avatar</string>
+    <string name="no_rooms_found">No Rooms Found</string>
+    <string name="available">Available</string>
+    <string name="occupied">Occupied</string>
+    <string name="email">Email</string>
 </resources>

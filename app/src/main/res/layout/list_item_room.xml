@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="room"
+            type="com.demo.virginmoneydemo.models.Room" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@{room.occupied ? @color/virgin_red : @color/light_green}"
+            android:gravity="center"
+            android:text="@{room.id}"
+            android:alpha="@{room.occupied ? 0.5f : 1f}"
+            android:minWidth="@dimen/people_item_avatar_height"
+            android:minHeight="@dimen/people_item_avatar_height"
+            tools:src="@tools:sample/avatars"
+            tools:text="1" />
+    </LinearLayout>
+</layout>
