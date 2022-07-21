@@ -8,6 +8,10 @@
         <entry key="app/src/main/res/drawable-anydpi/ic_email.xml" value="0.159" />
         <entry key="app/src/main/res/drawable-v24/ic_detail_back.xml" value="0.159" />
         <entry key="app/src/main/res/drawable/ic_black_scrim.xml" value="0.159" />
+        <entry key="app/src/main/res/drawable/ic_color.xml" value="0.159" />
+        <entry key="app/src/main/res/drawable/ic_detail_back.xml" value="0.159" />
+        <entry key="app/src/main/res/drawable/ic_email.xml" value="0.159" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.159" />
         <entry key="app/src/main/res/layout-v21/fragment_people_detail.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.30625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.30625" />
