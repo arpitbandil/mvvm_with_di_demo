@@ -6,14 +6,18 @@
     <data>
 
         <variable
+            name="isLoadingHidden"
+            type="boolean" />
+
+        <variable
             name="hasData"
             type="boolean" />
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:theme="@style/Theme.VirginMoneyDemo"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:theme="@style/Theme.VirginMoneyDemo">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/people_list"
@@ -34,7 +38,13 @@
             android:layout_gravity="center"
             android:text="@string/no_people_found"
             android:textAppearance="?attr/textAppearanceHeadline5"
-            app:isGone="@{hasData}" />
+            app:isGone="@{isLoadingHidden ? hasData : true}" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:isGone="@{isLoadingHidden}" />
     </FrameLayout>
 
 </layout>

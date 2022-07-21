@@ -13,6 +13,8 @@ import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.transition.ChangeBounds
+import androidx.transition.TransitionInflater
 import com.demo.virginmoneydemo.R
 import com.demo.virginmoneydemo.databinding.FragmentPeopleDetailBinding
 import com.demo.virginmoneydemo.viewmodels.PeopleDetailViewModel
@@ -29,7 +31,6 @@ class PeopleDetailFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         val binding = FragmentPeopleDetailBinding.inflate(
             inflater,
             container,

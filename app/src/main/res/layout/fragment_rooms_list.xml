@@ -8,6 +8,10 @@
         <variable
             name="hasData"
             type="boolean" />
+
+        <variable
+            name="isLoadingHidden"
+            type="boolean" />
     </data>
 
     <FrameLayout
@@ -72,7 +76,14 @@
             android:layout_gravity="center"
             android:text="@string/no_rooms_found"
             android:textAppearance="?attr/textAppearanceHeadline5"
-            app:isGone="@{hasData}" />
+            app:isGone="@{isLoadingHidden ? hasData : true}" />
+
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:isGone="@{isLoadingHidden}" />
     </FrameLayout>
 
 </layout>

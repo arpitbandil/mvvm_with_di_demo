@@ -19,6 +19,7 @@ fun bindCircleImageFromUrl(view: ImageView, imageUrl: String?) {
         Glide.with(view.context)
             .load(imageUrl)
             .placeholder(R.mipmap.ic_launcher)
+            .error(R.mipmap.ic_launcher)
             .apply(RequestOptions.circleCropTransform())
             .transition(DrawableTransitionOptions.withCrossFade())
             .into(view)
@@ -30,7 +31,7 @@ fun bindImageFromUrl(view: ImageView, imageUrl: String?) {
     if (!imageUrl.isNullOrEmpty()) {
         Glide.with(view.context)
             .load(imageUrl)
-            .placeholder(R.mipmap.ic_launcher)
+            .error(R.mipmap.ic_launcher)
             .transition(DrawableTransitionOptions.withCrossFade())
             .into(view)
     }

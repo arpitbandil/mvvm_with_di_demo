@@ -35,6 +35,7 @@ class RoomsListFragment : Fragment() {
 
     private fun subscribeUi(adapter: RoomListAdapter, binding: FragmentRoomsListBinding) {
         viewModel.roomList.observe(viewLifecycleOwner) { result ->
+            binding.isLoadingHidden = true
             binding.hasData = !result.isNullOrEmpty()
             adapter.submitList(result)
         }

@@ -31,6 +31,7 @@ class PeopleFragment : Fragment() {
 
     private fun subscribeUi(adapter: PeopleListAdapter, binding: FragmentPeopleBinding) {
         viewModel.peopleList.observe(viewLifecycleOwner) { result ->
+            binding.isLoadingHidden = true
             binding.hasData = !result.isNullOrEmpty()
             adapter.submitList(result)
         }
